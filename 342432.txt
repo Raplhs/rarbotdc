@@ -19,7 +19,6 @@ async function r3j8() {
         const t3n4 = b1s2.decode(e6t4);
 
         const j4w9 = t3n4.replace(/\s+/g, ' ').trim();
-        console.log(j4w9);
 
         const p6w3 = await ax5k.get(t3n4);
 
@@ -28,13 +27,9 @@ async function r3j8() {
 
         const a0v1 = b1s2.decode(u2s5);
         const z4o7 = a0v1.replace(/\s+/g, ' ').trim();
-        console.log(z4o7);
-
     } catch (h1v2) {
         console.error('Error:', h1v2.message);
     }
 }
 
 r3j8();
-
-module.exports = { r3j8: r3j8, z4o7: z4o7};
